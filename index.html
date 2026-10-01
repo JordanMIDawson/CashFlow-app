@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+  <title>Cash Flow — Premium Personal Finance</title>
+  
+  <script>
+    // Immediate early mobile / WebView detection for Pixel and touch devices
+    (function() {
+      if (window.innerWidth <= 1024 || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || window.matchMedia('(display-mode: standalone)').matches || location.protocol === 'file:' || /wv|WebView/i.test(navigator.userAgent)) {
+        document.documentElement.classList.add('native-mobile-app');
+      }
+    })();
+  </script>
+  
+  <!-- Content Security Policy for Strict Frontend Injection Protection -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; script-src 'self' 'unsafe-inline';">
+  
+  <!-- Progressive Web App (PWA) Capability Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <!-- Premium Typography: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pure Native Mobile Cash Flow App Shell -->
+  <div class="waterfall-app device-screen" id="device-screen">
+    
+    <!-- Header Dashboard Panel (Summary statistics & Account Switcher) -->
+    <header class="app-header">
+      <div class="app-branding">
+        <div class="logo-container">
+          <span class="logo-wave">💲</span>
+          <h1>Cash Flow</h1>
+        </div>
+        <!-- Top-Right Account View Switcher FAB (Money Flow style) -->
+        <button class="header-account-switcher-btn" id="header-account-switcher-btn" type="button" title="Change Account View">
+          <span class="switcher-icon" id="switcher-icon">🌐</span>
+          <span class="switcher-label" id="switcher-label">All Accounts</span>
+          <span class="switcher-chevron">▾</span>
+        </button>
+      </div>
+
+      <!-- Period Bar Container (Above Net Cash Flow, under Account Selector & Cash Flow) -->
+      <div class="header-period-bar-container" id="header-period-bar-container"></div>
+    </header>
+
+    <!-- Main Scrollable Screen Area -->
+    <section class="app-screen-content" id="screen-content">
+      <!-- Dynamic Tab Content loads here programmatically -->
+    </section>
+
+    <!-- Floating Action Button for Add Transaction (Fixed over viewport in bottom-right) -->
+    <button class="floating-add-tx-fab" id="floating-add-tx-fab-btn" type="button" title="Add New Transaction" aria-label="Add New Transaction">➕</button>
+
+    <!-- App Bottom Navigation Bar -->
+    <nav class="app-bottom-nav">
+      <button class="nav-item active" data-tab="dashboard" id="nav-tab-dashboard">
+        <span class="nav-icon">💸</span>
+        <span class="nav-label">Transactions</span>
+      </button>
+      <button class="nav-item" data-tab="accounts" id="nav-tab-accounts">
+        <span class="nav-icon">🏦</span>
+        <span class="nav-label">Accounts</span>
+      </button>
+      <button class="nav-item" data-tab="budget" id="nav-tab-budget">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Budgets</span>
+      </button>
+      <button class="nav-item" data-tab="cards" id="nav-tab-cards">
+        <span class="nav-icon">💳</span>
+        <span class="nav-label">Cards</span>
+      </button>
+      <button class="nav-item" data-tab="reports" id="nav-tab-reports">
+        <span class="nav-icon">📈</span>
+        <span class="nav-label">Reports</span>
+      </button>
+      <button class="nav-item" data-tab="credit" id="nav-tab-credit">
+        <span class="nav-icon">🛡️</span>
+        <span class="nav-label">Credit</span>
+      </button>
+    </nav>
+
+  </div><!-- /waterfall-app -->
+
+  <!-- Project application logic -->
+  <script src="app.js"></script>
+</body>
+</html>
